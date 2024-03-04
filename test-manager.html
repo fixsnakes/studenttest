@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Các Bài Thi Online</title>
+    <link rel="stylesheet" href="testmanager_style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Danh Sách Các Bài Thi Online</h1>
+        <img src="logo_ptit.png" alt="logo">
+    </header>
+
+    <main>
+        <div class="options">
+            <label for="examType">Chọn loại kỳ thi:</label>
+            <select id="examType">
+                <option value="practice">Luyện tập</option>
+                <option value="midTerm">Giữa kỳ</option>
+                <option value="finalTerm">Cuối kỳ</option>
+            </select>
+            <button id="showAllExams" onclick="showAllExams()">Hiển thị Tất cả Bài Thi</button>
+        </div>
+
+        <table id="examTable">
+            <thead>
+                <tr>
+                    <th>Tên Bài Thi</th>
+                    <th>Ngày Thi</th>
+                    <th>Trạng Thái</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- JavaScript will populate this part -->
+            </tbody>
+        </table>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

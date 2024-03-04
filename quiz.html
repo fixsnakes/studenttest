@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bộ Câu Hỏi</title>
+  <link rel="stylesheet" href="style_quiz.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div id="studentInfoContainer" class="hidden">
+    <h2>Thông Tin Sinh Viên</h2>
+    <p><strong>Mã Sinh Viên:</strong> <span id="infoFullName"></span></p>
+    <p><strong>Email:</strong> <span id="infoDOB">msinhvien@ptit.edu.vn</span></p>
+    <div id="timerContainer">
+      <p><strong>Thời gian còn lại:</strong> <span id="timerDisplay">00:59:59</span></p>
+    </div>
+  </div>
+  <div id="quizContainer"></div>
+
+  <script src="quiz.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+    const fullName = localStorage.getItem('username');
+    const infoFullName = document.getElementById('infoFullName');
+    infoFullName.textContent = fullName;
+    const studentInfoContainer = document.getElementById('studentInfoContainer');
+    studentInfoContainer.classList.remove('hidden');
+
+  </script>
+
+  <button id="showquiz" onclick="generateQuizQuestions()">Hiển thị bài kiểm tra</button>
+  <button id="submit" style="display: none;" onclick="submitQuiz()">Nộp Bài</button>
+</body>
+</html>
